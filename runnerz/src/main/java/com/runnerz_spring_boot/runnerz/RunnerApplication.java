@@ -21,11 +21,10 @@ public class RunnerApplication {
 	}
 
 	@Bean
-	CommandLineRunner runner() {
+	CommandLineRunner runner(){
 		return args -> {
-			System.out.println("CommandLineRunner is executing!");
-			Run run = new Run(1, "First Run", LocalDateTime.now(), LocalDateTime.now().plusHours(1), 3 , Location.OUTDOOR);
-            log.info("Run: {}", run);
+			Run run = new Run(1, "First Run", LocalDateTime.now(), LocalDateTime.now().plusHours(5), 5, Location.OUTDOOR);
+			log.info("Run : " + run);
 		};
 	}
 
